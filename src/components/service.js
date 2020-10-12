@@ -3,7 +3,6 @@ import React, { Component } from "react";
 export default class service extends Component {
   render() {
     const { data } = this.props;
-    console.log(data);
     return (
       <div className="service section" id="Service">
         <div className="container">

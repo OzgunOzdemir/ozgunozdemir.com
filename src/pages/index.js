@@ -115,7 +115,7 @@ export const pageQuery = graphql`
       }
       bannerList
     }
-    allContentfulService {
+    allContentfulService(limit: 3) {
       edges {
         node {
           title
