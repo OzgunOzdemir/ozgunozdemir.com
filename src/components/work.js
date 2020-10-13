@@ -1,9 +1,17 @@
 import React, { Component } from "react";
 import Img from "gatsby-image";
 
-export default class work extends Component {
+export default class work extends Component {  
   render() {
-    const { data } = this.props;
+  const { data } = this.props;
+  const uniqByKeepLast = (data, key) => {
+     return [
+       ...new Map(
+         data.map(x => [key(x), x])
+       ).values()
+     ]
+   }
+   const result = uniqByKeepLast(data.edges, i => i.node.siteName)
     return (
       <div className="work section" id="Work">
         <div className="container">
@@ -11,7 +19,7 @@ export default class work extends Component {
             <h2 className="text-center">Work</h2>
           </div>
           <ul className="work-list">
-            {data.edges.map((item, index) => {
+            {result.map((item, index) => {
               return (
                 <li key={index} className="item">
                   <div className="inner">
