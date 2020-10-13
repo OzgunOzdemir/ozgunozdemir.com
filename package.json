@@ -28,6 +28,7 @@
     "smooth-scroll": "^16.1.2"
   },
   "devDependencies": {
+    "firebase-tools": "^8.12.1",
     "prettier": "^1.19.1"
   },
   "keywords": [
@@ -41,6 +42,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "deploy": "firebase deploy --token \"$FIREBASE_TOKEN\" --only hosting:$FIREBASE_ENV",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {
