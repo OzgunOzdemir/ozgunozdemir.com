@@ -6,14 +6,6 @@ import moment from "moment";
 export default class Blogs extends Component {
   render() {
     const { data } = this.props;
-    const uniqByKeepLast = (data, key) => {
-      return [
-        ...new Map(
-          data.map(x => [key(x), x])
-        ).values()
-      ]
-    }
-    const result = uniqByKeepLast(data.edges, i => i.node.title)
     return (
       <div className="blogs-section section" id="Blogs">
         <div className="container">
@@ -21,14 +13,15 @@ export default class Blogs extends Component {
             <h2>Blogs</h2>
           </div>
           <ul
-            className={`blogs-list ${data.edges.length < 5 ? "few-blogs" : ""}`}
+            className={`blogs-list ${data.edges.length < 10 ? "few-blogs" : ""}`}
           >
-            {result.map((item, index) => {
+            {data.edges.map((item, index) => {
+              if(index % 2 === 0){
                 return (
                   <li key={index} className="item">
                     <div className="inner">
                       <Link className="link" to={item.node.slug} />
-
+  
                       {item.node.featureImage ? (
                         <Img
                           fixed={item.node.featureImage.fluid}
@@ -36,8 +29,8 @@ export default class Blogs extends Component {
                           objectPosition="50% 50%"
                         />
                       ) : (
-                          <div className="no-image"></div>
-                        )}
+                        <div className="no-image"></div>
+                      )}
                       <div className="details">
                         <h3 className="title">{item.node.title}</h3>
                         <span className="date">
@@ -48,6 +41,7 @@ export default class Blogs extends Component {
                     </div>
                   </li>
                 );
+              }  
             })}
           </ul>
           <div className="see-more">
