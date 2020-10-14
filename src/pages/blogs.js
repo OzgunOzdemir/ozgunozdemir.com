@@ -23,7 +23,7 @@ export default class Blogs extends Component {
             </div>
             <ul
               className={`blogs-list ${
-                data.allContentfulBlogs.edges.length < 10 ? "few-blogs" : ""
+                data.allContentfulBlogs.edges.length < 20 ? "few-blogs" : ""
               }`}
             >
               {data.allContentfulBlogs.edges.map((item, index) => {
