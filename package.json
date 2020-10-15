@@ -1,9 +1,9 @@
 {
-  "name": "rohit-gupta",
+  "name": "ozgunozdemir",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Personel Blog",
   "version": "0.1.0",
-  "author": "Rohit Gupta <rohitguptab33@gmail.com>",
+  "author": "Ozgun Ozdemir <ozgunozdemir92@gmail.com>",
   "dependencies": {
     "bootstrap": "^4.4.1",
     "disqus-react": "^1.0.7",
@@ -44,12 +44,5 @@
     "clean": "gatsby clean",
     "deploy": "firebase deploy --token \"$FIREBASE_TOKEN\" --only hosting:$FIREBASE_ENV",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/rohitguptab/rg-portfolio"
-  },
-  "bugs": {
-    "url": "https://github.com/rohitguptab/rg-portfolio/issues"
   }
 }

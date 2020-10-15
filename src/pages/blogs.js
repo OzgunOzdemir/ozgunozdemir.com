@@ -10,11 +10,12 @@ import SEO from "../components/seo";
 export default class Blogs extends Component {
   render() {
     const { data } = this.props;
+    console.log(data);
     return (
       <Layout>
         <SEO
           title="Blogs"
-          keywords={[`Rohit Gupta`, `Frontend Developer`, `Developer`, `Blogs`]}
+          keywords={[`Ozgun Ozdemir`, `Computer Engineer`, `Developer`, `Blogs`]}
         />
         <div className="site-container blogs-page" id="Blogs">
           <div className="container">

@@ -8,9 +8,9 @@ const { spaceId, accessToken } = process.env;
 
 module.exports = {
   siteMetadata: {
-    title: `Rohit Gupta`,
+    title: `Ozgun Ozdemir`,
     description: `Personal Site`,
-    author: `@rohitguptab`
+    author: `@OzdmrOzgn`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -34,8 +34,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Rohit Gupta`,
-        short_name: `Rohit Gupta`,
+        name: `Ozgun Ozdemir`,
+        short_name: `Ozgun Ozdemir`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#333`,
