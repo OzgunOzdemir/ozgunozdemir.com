@@ -28,10 +28,10 @@ const Header = ({ data }) => (
                 <strong>Full Name</strong>
                 <p>{data.name}</p>
               </li>
-              <li>
+              {/* <li>
                 <strong>Age</strong>
                 <p>{data.age} Years</p>
-              </li>
+              </li> */}
               <li>
                 <strong>Location</strong>
                 <p>{data.location}</p>
