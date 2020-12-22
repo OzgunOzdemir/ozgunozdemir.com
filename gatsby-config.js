@@ -13,6 +13,14 @@ module.exports = {
     author: `@OzdmrOzgn`
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-151456318-1",
+        head: true,
+        anonymize: true,
+      }
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
