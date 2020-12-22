@@ -28,6 +28,7 @@
     "smooth-scroll": "^16.1.2"
   },
   "devDependencies": {
+    "eslint": "^7.16.0",
     "firebase-tools": "^8.12.1",
     "prettier": "^1.19.1"
   },

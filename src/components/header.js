@@ -16,15 +16,6 @@ export default class Header extends Component {
       <header className={`site-header ${menu ? "active" : ""}`}>
         <div className="container">
           <div className="header-main">
-            {/* <div className="logo">
-              <Link to="/">
-                {data.logo.file.url ? (
-                  <img src={data.logo.file.url} alt="logo" />
-                ) : (
-                  <span>{data.siteName}</span>
-                )}
-              </Link>
-            </div> */}
             <div
               className="responsive-menu"
               onClick={() => {
@@ -49,27 +40,27 @@ export default class Header extends Component {
                   </li>
                   {data.menus
                     .filter(item => item === "About")
-                    .map(t => {
+                    .map((t, i) => {
                       return (
-                        <li>
+                        <li key={i}>
                           <Link to={`/#About`}>About</Link>
                         </li>
                       );
                     })}
                   {data.menus
                     .filter(item => item === "Service")
-                    .map(t => {
+                    .map((t, i) => {
                       return (
-                        <li>
+                        <li key={i}>
                           <Link to={`/#Service`}>Service</Link>
                         </li>
                       );
                     })}
                   {data.menus
                     .filter(item => item === "Blogs")
-                    .map(t => {
+                    .map((t, i) => {
                       return (
-                        <li>
+                        <li key={i}>
                           <Link to={`/#Blogs`}>Blogs</Link>
                         </li>
                       );
@@ -77,27 +68,27 @@ export default class Header extends Component {
 
                   {data.menus
                     .filter(item => item === "Work")
-                    .map(t => {
+                    .map((t, i) => {
                       return (
-                        <li>
+                        <li key={i}>
                           <Link to={`/#Work`}>Work</Link>
                         </li>
                       );
                     })}
                   {data.menus
                     .filter(item => item === "Photos")
-                    .map(t => {
+                    .map((t, i) => {
                       return (
-                        <li>
+                        <li key={i}>
                           <Link to={`/#Photos`}>Photos</Link>
                         </li>
                       );
                     })}
                   {data.menus
                     .filter(item => item === "Contact")
-                    .map(t => {
+                    .map((t, i) => {
                       return (
-                        <li>
+                        <li key={i}>
                           <Link to={`/#Contact`}>Contact</Link>
                         </li>
                       );
@@ -118,18 +109,18 @@ export default class Header extends Component {
                   </li>
                   {data.menus
                     .filter(item => item === "Blogs")
-                    .map(t => {
+                    .map((t, i) => {
                       return (
-                        <li>
+                        <li key={i}>
                           <Link to="/blogs">Blogs</Link>
                         </li>
                       );
                     })}
                   {data.menus
                     .filter(item => item === "Photos")
-                    .map(t => {
+                    .map((t, i) => {
                       return (
-                        <li>
+                        <li key={i}>
                           <Link to="/photos">Photos</Link>
                         </li>
                       );

@@ -21,10 +21,9 @@ export default class Blogs extends Component {
                   <li key={index} className="item">
                     <div className="inner">
                       <Link className="link" to={item.node.slug} />
-  
                       {item.node.featureImage ? (
                         <Img
-                          fixed={item.node.featureImage.fluid}
+                        fluid={item.node.featureImage.fluid}
                           objectFit="cover"
                           objectPosition="50% 50%"
                         />

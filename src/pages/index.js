@@ -23,46 +23,46 @@ const IndexPage = ({ data }) => (
 
     {data.contentfulSiteInformation.menus
       .filter(item => item === "About")
-      .map(t => {
-        return <About data={data.contentfulAboutMe}></About>;
+      .map((t, i) => {
+        return <About key={i} data={data.contentfulAboutMe}></About>;
       })}
 
     {data.contentfulSiteInformation.menus
       .filter(item => item === "Service")
-      .map(t => {
-        return <Service data={data.allContentfulService}></Service>;
+      .map((t, i) => {
+        return <Service key={i} data={data.allContentfulService}></Service>;
       })}
 
     {data.contentfulSiteInformation.menus
       .filter(item => item === "Blogs")
-      .map(t => {
-        return <Blogs data={data.allContentfulBlogs}></Blogs>;
+      .map((t, i) => {
+        return <Blogs key={i} data={data.allContentfulBlogs}></Blogs>;
       })}
 
     {data.contentfulSiteInformation.menus
       .filter(item => item === "Work")
-      .map(t => {
-        return <Work data={data.allContentfulWorks}></Work>;
+      .map((t, i) => {
+        return <Work key={i} data={data.allContentfulWorks}></Work>;
       })}
 
     {data.contentfulSiteInformation.menus
       .filter(item => item === "Testimonials")
-      .map(t => {
+      .map((t, i) => {
         return (
-          <Testimonial data={data.allContentfulTestimonials}></Testimonial>
+          <Testimonial key={i} data={data.allContentfulTestimonials}></Testimonial>
         );
       })}
 
     {data.contentfulSiteInformation.menus
       .filter(item => item === "Photos")
-      .map(t => {
-        return <Photos data={data.contentfulPhotos}></Photos>;
+      .map((t, i) => {
+        return <Photos key={i} data={data.contentfulPhotos}></Photos>;
       })}
 
     {data.contentfulSiteInformation.menus
       .filter(item => item === "Contact")
-      .map(t => {
-        return <Contact data={data.contentfulAboutMe.gmail}></Contact>;
+      .map((t, i) => {
+        return <Contact key={i} data={data.contentfulAboutMe.gmail}></Contact>;
       })}
   </Layout>
 );
