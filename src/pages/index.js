@@ -58,12 +58,7 @@ const IndexPage = ({ data }) => (
       .map((t, i) => {
         return <Photos key={i} data={data.contentfulPhotos}></Photos>;
       })}
-
-    {data.contentfulSiteInformation.menus
-      .filter(item => item === "Contact")
-      .map((t, i) => {
-        return <Contact key={i} data={data.contentfulAboutMe.gmail}></Contact>;
-      })}
+      
   </Layout>
 );
 
