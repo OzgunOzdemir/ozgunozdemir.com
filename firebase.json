@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "ozgunozdemir-8ac8d",
+    "site": "ozgunozdemir",
     "public": "public",
     "ignore": [
       "firebase.json",
